@@ -55,7 +55,10 @@ a:hover{
 
 a{
     color: var(--text-color);
-    text-decoration: none;
+}
+
+.a-section{
+    margin: 8px;
 }
 
 /* p.txt-section:hover{
@@ -122,6 +125,14 @@ h1{
 }
 
 #skills{
+    display: none;
+}
+
+:is(.content-wrapper:has(#about-toggle:checked)) #about {
+    display: flex
+}
+
+#about{
     display: none;
 }
 
