@@ -2,6 +2,27 @@ body{
     font-family: monospace;
     font-size: 20px;
     user-select: none;
+    background-color: var(--main-color);
+    color: var(--text-color);
+    overflow: hidden;
+}
+
+@media (prefers-color-scheme: light) {
+    body{
+        --main-color: white;
+        --text-color: black;
+        --accent-color: lightgray;
+        --that-one-empty-folder-color: gray;
+    }
+}
+
+@media (prefers-color-scheme: dark) {
+    body{
+        --main-color: black;
+        --text-color: white;
+        --accent-color: gray;
+        --that-one-empty-folder-color: lightgray;
+    }
 }
 
 .main-wrapper{
@@ -10,7 +31,7 @@ body{
     display: flex;
     justify-content: center;
     flex-direction: column;
-    gap: 16px
+    gap: 16px;
 }
 
 .header{
@@ -29,8 +50,8 @@ input[type="radio"], input[type="checkbox"] {
 }
 
 label:has(input:checked) p{
-    color: white;
-    background-color: black;
+    color: var(--main-color);
+    background-color: var(--text-color);
 }
 
 label:has(input:checked) .folder-name::after{
@@ -42,16 +63,16 @@ label:has(input:checked) .txt-name::after{
 }
 
 label:has(input):hover{
-    background-color: lightgray;
+    background-color: var(--accent-color);
 }
 
 a:hover{
-    background-color: lightgray;
+    background-color: var(--accent-color);
     text-decoration: underline;
 }
 
 a{
-    color: black;
+    color: var(--text-color);
     text-decoration: none;
 }
 
@@ -65,8 +86,8 @@ a{
 }
 
 :is(.main-wrapper:has(#main-toggle:checked)) h1 {
-    background-color: black;
-    color: white
+    background-color: var(--text-color);
+    color: var(--main-color)
 }
 
 h1{
@@ -100,7 +121,7 @@ h1{
 
 .txt{
     position: absolute;
-    border: 1px black solid;
+    border: 1px var(--text-color) solid;
 }
 
 #readme{
@@ -109,7 +130,7 @@ h1{
 
 .error-name{
     position: absolute;
-    color: gray;
+    color: var(--that-one-empty-folder-color);
     width: auto
 }
 
