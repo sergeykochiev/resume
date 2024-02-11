@@ -78,7 +78,7 @@ h1{
     display: flex;
     opacity: 0;
     pointer-events: none;
-    margin-left: 15vw;
+    margin-left: 320px;
     gap: 16px
 }
 
