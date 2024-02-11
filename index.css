@@ -1,0 +1,186 @@
+body{
+    font-family: monospace;
+    font-size: 20px;
+    user-select: none;
+}
+
+.main-wrapper{
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    gap: 16px
+}
+
+.header{
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    width: 100%;
+    gap: 16px
+}
+
+input[type="radio"], input[type="checkbox"] {
+    appearance: none;
+    position: absolute;
+    z-index: -1;
+    opacity: 0
+}
+
+label:has(input:checked) p{
+    color: white;
+    background-color: black;
+}
+
+label:has(input:checked) .folder-name::after{
+    content: '/';
+}
+
+label:has(input:checked) .txt-name::after{
+    content: '>';
+}
+
+label:has(input):hover{
+    background-color: lightgray;
+}
+
+a:hover{
+    background-color: lightgray;
+    text-decoration: underline;
+}
+
+a{
+    color: black;
+    text-decoration: none;
+}
+
+/* p.txt-section:hover{
+    font-weight: bold;
+} */
+
+:is(.main-wrapper:has(#main-toggle:checked)) .content-wrapper {
+    opacity: 1;
+    pointer-events: all;
+}
+
+:is(.main-wrapper:has(#main-toggle:checked)) h1 {
+    background-color: black;
+    color: white
+}
+
+h1{
+    font-size: 48px;
+    margin: 0
+}
+
+.content-wrapper{
+    display: flex;
+    opacity: 0;
+    pointer-events: none;
+    margin-left: 15vw;
+    gap: 16px
+}
+
+.txt-section{
+    padding: 8px;
+    margin: 0
+}
+
+.content-section{
+    width: 180px;
+    display: grid;
+    grid-template-rows: auto;
+}
+
+.content-name{
+    padding: 8px;
+    margin: 0;
+}
+
+.txt{
+    position: absolute;
+    border: 1px black solid;
+}
+
+#readme{
+    display: none;
+}
+
+.error-name{
+    position: absolute;
+    color: gray;
+    width: auto
+}
+
+:is(.content-wrapper:has(#readme-toggle:checked)) #readme {
+    display: flex
+}
+
+#skills{
+    display: none;
+}
+
+:is(.content-wrapper:has(#skills-toggle:checked)) #skills {
+    display: flex
+}
+
+#links{
+    display: none;
+}
+
+.wrapper-wrap{
+    flex-wrap: wrap
+}
+
+.wrapper-list{
+    flex-direction: column;
+}
+
+:is(.content-wrapper:has(#links-toggle:checked)) #links {
+    display: flex
+}
+
+#current{
+    display: none
+}
+
+:is(.content-wrapper:has(#current-toggle:checked)) #current {
+    display: flex
+}
+
+#learning{
+    display: none
+}
+
+:is(.content-wrapper:has(#learning-toggle:checked)) #learning {
+    display: flex
+}
+
+#planning{
+    display: none
+}
+
+:is(.content-wrapper:has(#planning-toggle:checked)) #planning {
+    display: flex
+}
+
+#exp{
+    display: none
+}
+
+:is(.content-wrapper:has(#exp-toggle:checked)) #exp {
+    display: flex
+}
+
+:is(.content-wrapper:has(#skills-toggle:not(:checked))) #current {
+    display: none
+}
+
+:is(.content-wrapper:has(#skills-toggle:not(:checked))) #learning {
+    display: none
+}
+
+:is(.content-wrapper:has(#skills-toggle:not(:checked))) #planning {
+    display: none
+}

@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1 user-scalable=no minimum-scale=1 maximum-scale=1">
+    <title>Resume</title>
+    <link rel="stylesheet" href="index.css">
+    <script src="index.js"></script>
+</head>
+<body>
+    <div class="main-wrapper">
+        <div class="header">
+            <label class="main-toggle-wrapper">
+                <h1 class="folder-name">Resume/Kochiev Sergei</h1>
+                <input type="checkbox" id="main-toggle">
+            </label>
+        </div>
+       <div class="content-wrapper">
+            <div class="content-section">
+                <label>
+                    <input type="radio" id="readme-toggle" name="1st-section"/>
+                    <p class="content-name txt-name">ReadME.txt</p>
+                </label>
+                <label>
+                    <input type="radio" id="skills-toggle" name="1st-section"/>
+                    <p class="content-name folder-name">Skills</p>
+                </label>
+                <label>
+                    <input type="radio" id="exp-toggle" name="1st-section"/>
+                    <p class="content-name folder-name">Experience</p>
+                </label>
+                <label>
+                    <input type="radio" id="links-toggle" name="1st-section"/>
+                    <p class="content-name txt-name">Links.txt</p>
+                </label>
+            </div>
+            <div class="content-section">
+                <div class="content-name txt wrapper-list" id="readme">
+                    <p class="txt-section">name/surname: Sergei Kochiev</p>
+                    <p class="txt-section">hometown: Ivanovo, Russia</p>
+                    <p class="txt-section">education: ISUCT, 1.5 years</p>
+                    <p class="txt-section">about me: An IT student who really wants to be a fullstack software dev in the future</p>
+                    <p class="txt-section">fav quote: "A tip for beginners: begin"</p>
+                </div>
+                <div id="skills" class="wrapper-list">
+                    <label>
+                        <input type="radio" id="current-toggle" name="2nd-section"/>
+                        <p class="content-name txt-name">current.txt</p>
+                    </label>
+                    <label>
+                        <input type="radio" id="learning-toggle" name="2nd-section"/>
+                        <p class="content-name txt-name">learning.txt</p>
+                    </label>
+                    <label>
+                        <input type="radio" id="planning-toggle" name="2nd-section"/>
+                        <p class="content-name txt-name">planning.txt</p>
+                    </label>
+                </div>
+                <div class="content-name txt wrapper-wrap" id="links">
+                    <a href="https://github.com/sergeykochiev" class="txt-section">github</a>
+                    <a href="https://t.me/ksjdjdosjf" class="txt-section">telegram</a>
+                    <a href="https://discordapp.com/users/538757326337867786" class="txt-section">discord</a>
+                </div>
+                <div id="exp" class="wrapper-list">
+                    <p class="content-name error-name">This folder is empty. :(</p>
+                </div>
+                <!-- <p class="content-name">Skills</p>
+                <p class="content-name">Links.txt</p> -->
+            </div>
+            <div class="content-section">
+                <div class="content-name txt wrapper-wrap" id="current">
+                    <p class="txt-section">Python</p>
+                    <p class="txt-section">PyTorch</p>
+                    <p class="txt-section">Flask</p>
+                    <p class="txt-section">JavaScript/HTML/CSS</p>
+                </div>
+                <div class="content-name txt wrapper-wrap" id="learning">
+                    <p class="txt-section">React</p>
+                    <p class="txt-section">NestJS</p>
+                    <p class="txt-section">TypeScript</p>
+                    <p class="txt-section">Tailwind CSS</p>
+                    <p class="txt-section">PostgreSQL</p>
+                </div>
+                <div class="content-name txt wrapper-wrap" id="planning">
+                    <p class="txt-section">FastAPI</p>
+                    <p class="txt-section">GOLang</p>
+                    <p class="txt-section">NextJS</p>
+                    <p class="txt-section">and plenty more...</p>
+                </div>  
+            </div>
+       </div>
+    </div>
+</body>
+</html>
