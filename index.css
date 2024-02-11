@@ -7,29 +7,11 @@ body{
     overflow: hidden;
 }
 
-@media (prefers-color-scheme: light) {
-    body{
-        --main-color: white;
-        --text-color: black;
-        --accent-color: lightgray;
-        --that-one-empty-folder-color: gray;
-    }
-}
-
-@media (prefers-color-scheme: dark) {
-    body{
-        --main-color: black;
-        --text-color: white;
-        --accent-color: gray;
-        --that-one-empty-folder-color: lightgray;
-    }
-}
-
 .main-wrapper{
     width: 100vw;
     height: 100vh;
     display: flex;
-    justify-content: center;
+    justify-content: center;    
     flex-direction: column;
     gap: 16px;
 }
@@ -38,7 +20,7 @@ body{
     display: flex;
     align-items: center;
     flex-direction: row;
-    width: 100%;
+    width: 100vw;
     gap: 16px
 }
 
@@ -49,7 +31,7 @@ input[type="radio"], input[type="checkbox"] {
     opacity: 0
 }
 
-label:has(input:checked) p{
+label:has(input:checked) p.content-name{
     color: var(--main-color);
     background-color: var(--text-color);
 }
@@ -110,13 +92,14 @@ h1{
 
 .content-section{
     width: 180px;
+    max-width: 100vw;
     display: grid;
     grid-template-rows: auto;
 }
 
 .content-name{
     padding: 8px;
-    margin: 0;
+    margin: 1px;
 }
 
 .txt{
@@ -205,3 +188,108 @@ h1{
 :is(.content-wrapper:has(#skills-toggle:not(:checked))) #planning {
     display: none
 }
+
+.back-button{
+    position: absolute;
+    right: 16px;
+    bottom: 16px;
+    display: none;
+    padding: 8px;
+}
+
+p{
+    margin: 0
+}
+
+.back-button:checked{
+    color: var(--main-color);
+    background-color: var(--text-color);
+}
+
+@media (prefers-color-scheme: light) {
+    body{
+        --main-color: white;
+        --text-color: black;
+        --accent-color: lightgray;
+        --that-one-empty-folder-color: gray;
+    }
+}
+
+@media (prefers-color-scheme: dark) {
+    body{
+        --main-color: black;
+        --text-color: white;
+        --accent-color: gray;
+        --that-one-empty-folder-color: lightgray;
+    }
+}
+
+@media screen and (max-width: 40rem) {
+    .content-wrapper{
+        margin-left: 0px
+    }
+    .main-wrapper{
+        justify-content: initial;
+        margin-top: 40vh
+    }
+    body{
+        font-size: 16px
+    }
+    h1{
+        font-size: 36px
+    }
+    label:has(input):hover{
+        background-color: inherit;
+    }
+    /* label:focus{
+        background-color: var(--text-color);
+        color: var(--main-color)
+    } */
+    :is(.content-wrapper:has(input[class='1st-section']:checked)) .section-1 {
+        display: none
+    }
+    :is(.content-wrapper:has(input[class='2st-section']:checked)) .section-2 {
+        display: none
+    }
+    :is(.content-wrapper:has(input[class='3st-section']:checked)) .section-3 {
+        display: none
+    }
+}
+
+:is(.main-wrapper:has(input[class='main-toggle']:checked)) #main-back-button {
+    display: block
+}
+
+:is(.main-wrapper:has(input[class='main-toggle']:checked)) #first-back-button {
+    display: none
+}
+
+:is(.main-wrapper:has(input[class='main-toggle']:checked)) #second-back-button {
+    display: none
+}
+
+:is(.main-wrapper:has(input[class='1st-section']:checked)) #main-back-button{
+    display: none
+}
+
+:is(.main-wrapper:has(input[class='1st-section']:checked)) #first-back-button{
+    display: block
+}
+
+:is(.main-wrapper:has(input[class='1st-section']:checked)) #second-back-button{
+    display: none
+}
+
+:is(.main-wrapper:has(input[class='2st-section']:checked)) #main-back-button{
+    display: none
+}
+
+:is(.main-wrapper:has(input[class='2st-section']:checked)) #first-back-button{
+    display: none
+}
+
+:is(.main-wrapper:has(input[class='2st-section']:checked)) #second-back-button{
+    display: block
+}
+
+

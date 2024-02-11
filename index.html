@@ -9,32 +9,44 @@
 </head>
 <body>
     <div class="main-wrapper">
+        <label class="back-button" id="main-back-button">
+            <p>go back</p>
+            <input type="radio" id="main-section-toggle" name="main-toggle">
+        </label>
+        <label class="back-button" id="first-back-button">
+            <p>go back</p>
+            <input type="radio" id="1st-section-toggle" name="1st-section">
+        </label>
+        <label class="back-button" id="second-back-button">
+            <p>go back</p>
+            <input type="radio" id="2st-section-toggle" name="2nd-section">
+        </label>
         <div class="header">
             <label class="main-toggle-wrapper">
                 <h1 class="folder-name">Resumes/Kochiev Sergei</h1>
-                <input type="checkbox" id="main-toggle">
+                <input class="main-toggle" type="radio" id="main-toggle" name="main-toggle">
             </label>
         </div>
-       <div class="content-wrapper">
-            <div class="content-section">
+        <div class="content-wrapper">
+            <div class="content-section section-1">
                 <label>
-                    <input type="radio" id="readme-toggle" name="1st-section"/>
+                    <input class="1st-section" type="radio" id="readme-toggle" name="1st-section"/>
                     <p class="content-name txt-name">ReadME.txt</p>
                 </label>
                 <label>
-                    <input type="radio" id="skills-toggle" name="1st-section"/>
+                    <input class="1st-section" type="radio" id="skills-toggle" name="1st-section"/>
                     <p class="content-name folder-name">Skills</p>
                 </label>
                 <label>
-                    <input type="radio" id="exp-toggle" name="1st-section"/>
+                    <input class="1st-section" type="radio" id="exp-toggle" name="1st-section"/>
                     <p class="content-name folder-name">Experience</p>
                 </label>
                 <label>
-                    <input type="radio" id="links-toggle" name="1st-section"/>
+                    <input class="1st-section" type="radio" id="links-toggle" name="1st-section"/>
                     <p class="content-name txt-name">Links.txt</p>
                 </label>
             </div>
-            <div class="content-section">
+            <div class="content-section section-2">
                 <div class="content-name txt wrapper-list" id="readme">
                     <p class="txt-section">name/surname: Sergei Kochiev</p>
                     <p class="txt-section">hometown: Ivanovo, Russia</p>
@@ -44,15 +56,15 @@
                 </div>
                 <div id="skills" class="wrapper-list">
                     <label>
-                        <input type="radio" id="current-toggle" name="2nd-section"/>
+                        <input class="2st-section" type="radio" id="current-toggle" name="2nd-section"/>
                         <p class="content-name txt-name">current.txt</p>
                     </label>
                     <label>
-                        <input type="radio" id="learning-toggle" name="2nd-section"/>
+                        <input class="2st-section" type="radio" id="learning-toggle" name="2nd-section"/>
                         <p class="content-name txt-name">learning.txt</p>
                     </label>
                     <label>
-                        <input type="radio" id="planning-toggle" name="2nd-section"/>
+                        <input class="2st-section" type="radio" id="planning-toggle" name="2nd-section"/>
                         <p class="content-name txt-name">planning.txt</p>
                     </label>
                 </div>
@@ -67,7 +79,7 @@
                 <!-- <p class="content-name">Skills</p>
                 <p class="content-name">Links.txt</p> -->
             </div>
-            <div class="content-section">
+            <div class="content-section section-3">
                 <div class="content-name txt wrapper-wrap" id="current">
                     <p class="txt-section">Python</p>
                     <p class="txt-section">PyTorch</p>
