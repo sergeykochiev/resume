@@ -217,6 +217,14 @@ p{
     background-color: var(--text-color);
 }
 
+.hint:before{
+    content: '<-    '
+}
+
+.hint:after{
+    content: ''
+}
+
 @media (prefers-color-scheme: light) {
     body{
         --main-color: white;
@@ -265,6 +273,17 @@ p{
     :is(.content-wrapper:has(input[class='3st-section']:checked)) .section-3 {
         display: none
     }
+    .header{
+        flex-direction: column;
+        align-items: baseline;
+        justify-content: left;
+    }
+    .hint:after{
+        content: ' ^'
+    }
+    .hint:before{
+        content: '^ '
+    }
 }
 
 :is(.main-wrapper:has(input[class='main-toggle']:checked)) #main-back-button {
@@ -303,4 +322,24 @@ p{
     display: block
 }
 
+.hint{
+    font-size: 12px;
+    animation: 1s infinite hint-blink;
+}
+
+:is(.main-wrapper:has(#main-toggle:checked)) .hint {
+    display: none
+}
+
+@keyframes hint-blink {
+    0% {
+        opacity: 0
+    }
+    50% {
+        opacity: 1
+    }
+    100% {
+        opacity: 0
+    }
+}
 
