@@ -144,6 +144,14 @@ h1{
     display: none;
 }
 
+:is(.content-wrapper:has(#colors-toggle:checked)) #colors {
+    display: flex
+}
+
+#colors{
+    display: none;
+}
+
 .wrapper-wrap{
     flex-wrap: wrap
 }
@@ -341,6 +349,10 @@ p{
     100% {
         opacity: 0
     }
+}
+
+.hidden-folder{
+    opacity: 0
 }
 
 /* blud doesnt deploy so recommit */
